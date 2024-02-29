@@ -1,7 +1,7 @@
 JavaScript
 ----------
 JavaScript can be used in both frontend(behaviour) as well as backend(it used to do logical operations)
-js is compile using code
+js is compile using node
 extension - .js
 display - console.log()-used to display content
 its a single thread programming language - line by line execution
@@ -9,7 +9,7 @@ dynamically typed language - datatype change - drawback-not good
 cd-change directory
 output - ctrl + j
 
-data type
+data type - 8 types
 ----------
 1) string - single quotes or double quotes
 2)Boolean - true or false
@@ -22,6 +22,7 @@ concatenation - to join/add same or different data type
 string+string = string
 string + number = string
 number + number = number
+string*number = number
 
 variables
 ---------
@@ -50,3 +51,212 @@ template literals
 - its a way of displaying content.  
 `content ${variable}`(back tick is used)
 
+operators
+----------
+1)Assignment operators - =
+2)Arithmetic operator
+      addition -  +
+      substraction - -
+      division -  /
+      multiplication - *
+      modules - %
+      exponentent - power - **
+3)Relational operators - will return Boolean values(true/false)
+      > >= < <= == ===
+      = Assign
+      == comparison
+      === comparison+datatype check
+4)logical operators - joins two or more Relational operators
+ AND (&&)
+ T && T = T
+ T && F = F
+ F && T = F
+ F && F =F
+ OR (||)
+ T && T = T
+ T && F = T
+ F && T = T
+ F && F =F
+ NOT(!)
+ !T = F
+ !F = T
+
+ 5)increment/decrement operators
+ (++)/(--)
+ x=10
+ x++ = 10+1 =11
+ x-- = 10-1 -9
+ position of ++ and -- important
+ 6)shorthand operators
+ x =x+y => x+=y
+ x=x-y => x-=y
+ 7)Ternary operator
+   condition? truestatement:false statement
+
+
+ conditional statement/decision making statement
+ -------------------------------------------------
+ 1) if else
+ syntax       if(condition){
+                             statement
+                                        }
+               else if{
+                            statement
+                                         }
+                  else{
+                        statement
+                  }                       
+ 
+Looping statement
+------------------
+- to do task repeatedly
+1)while Looping
+
+  syntax
+  --------
+  variable initialization
+  while(condition){
+      task()
+      condition to exit the loop(increment/decrement)
+  }
+to convert string into number = Number(s)
+eg:10/12
+reminder = 2
+quotient =1.2
+
+Math.floor - remove decimal point
+parseInt - also remove decimal point
+
+palindrom = reverse order same no
+factorial 5! = 1*2*3*4*5
+armstrong 
+  eg 153=1**3+5**3+3**3(cube)=1+125+27=153
+  prime number - it should have factor as 1 and given number
+
+2)for loop
+  syntax
+  ------
+   for(variable initialization ; condition; exit condition){
+      statement
+   }
+   break - for forcefully exit the loop
+   nested loop - loop inside another loop
+
+   1)functions
+   --------------
+   - used to do same task repeatedly at different locations
+   function has two parts 
+   1)function definition
+      -task
+    -syntax
+    --------
+    function functionname(arg1,........argn){
+                task
+    }
+    arg-argements are values to do task
+   2)function call
+      -to execute the task 
+     -syntax
+     ------
+     functionname(arg1,..........argn) 
+functional hoisting-using the variable before declairing and it is possible in normal function
+variables inside a function having blocklevel scope.we cannot access the variable outside.if we need to acess the variable need to give return statement.
+and return statement should be the last statement.after the return statement it will not execute.
+
+
+2)arrow function-latest better than normal function-from ES6
+syntax
+-------
+ keyword variable = (arg1,.........argn)=>{
+    more than one statement(if only single statement not needed curly bracket)
+
+ }
+
+variable()
+
+3)predefined functions
+  eg: console.log() ,number(),typeof(),math.floor(),parseInt()
+
+4)call back function- a function calling another function are called call back function
+
+setTimeout - it is a predefined function and it is also a call back method -its for a time delay in execution-arrow function can be use
+
+5)asynchronous function-those function which has the time delay eg;setTimeout,API calls
+synchronous function-those function which doesn't has the time delay
+eg:console.log 
+
+6)nested function - function definition inside another function
+   closure property-functions inside a parent property can access in child function.but child cannot access in parent
+
+
+DATASTRUCTURE
+--------------
+
+- specialized format of organizing,retrieving processing and storing data
+- eg array, list, linkedlist, stack, queue, tree graph
+
+array
+-----
+ -unlike varables array can store more than one data/value
+ -array can store more than one datatype
+ -definition: array is a single variable which can store more than value of different datatype that are seperated by commas and enclosed within square bracket
+ -array in JavaScript infinite
+
+ -store - key:value
+
+ key:index position
+ value:data
+index - indicates the position of elements in an array
+value -start from 0- (end)array length-1
+
+length - number of items/data inside the array
+start from 1
+
+representation/syntax
+
+keyword variable = [item1,.......itemn ]
+
+
+array operations
+---------------------
+1)push() - to add data to an array at the end
+2)unshift() - to add data to an array at the start
+3)pop() - to remove an item from array at the end
+4)shift() - to remove item from array at the start
+5)sort() -sorting - arranging ascending or descending order
+6)forEach() - to access each items from an array - it returns void. can't do further activity
+7)map(callback) - it creates a new array having same number of elements in the parent array - can do further avtivity
+8)reduce(callback) expecting single value from an array eg:highest,lowest,sum 
+9)filter - to create a new array having elements that satisfy a particular condition
+10)flat() - to change the directly convert to one dimension
+     by giving depth infinite it directly co
+11)some() - it returns boolean value based on a condition
+12)find() - it returns a first value that satisfy a particular condition
+13)includes() - returns boolean value based on items
+14)indexOf() - to find the index value of elements
+15)splice() - to remove or add from a particular position in an array
+
+
+
+different way of accessing array elements-to arrange the array
+------------------------------------------
+1)for loop - using for operate in seperate index values
+2)for in - directly access the index of an array
+3)for of - access array by values
+
+
+truthy operator
+-------------
+!ispresent && console.log('not present')
+   - if the condition not satisfied we can use truthy operator
+
+Binary Search
+--------------
+it gives more perform to the code and reduces the time delay
+it is divide the searching time by half
+
+nested array
+------------
+Array inside an array
+Flat() - for reducing no of nested array
+  eg-3 dimension to 2 dimension(decreases 1 dimension)if need to decreases more than one dimension can mention the value in bracket
